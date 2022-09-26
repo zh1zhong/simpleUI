@@ -1,0 +1,18 @@
+/*
+  _开头的文件意味着不能单独使用
+  需要按顺序导入
+*/
+
+// config
+@import 'variables'; // 导入_varibales.scss文件，只能被引用不能被单独编译
+
+// layout
+@import 'init';
+
+// minxin
+@import 'mixin';
+
+// button样式
+@import '../components//Button//style';
+
+@import '../components//Menu//style';
