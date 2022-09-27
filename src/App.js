@@ -4,14 +4,19 @@ import Button, { ButtonType, ButtonSize } from './components/Button/button.tsx'
 import Menu from './components/Menu/menu.tsx'
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import Icon from './components/Icon/icon'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 
 function App() {
 
   return (
     <div className="App">
       <header className="App-header">
+        <Icon icon='coffee' theme="danger" size="10x"/>
         <Menu
-          mode={"vertical"}
+          // mode={"vertical"}
           defaultOpenSubMenus={'1'}
           defaultIndex={'0'}
           onSelect={index => alert(index)}

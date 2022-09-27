@@ -1,4 +1,6 @@
 
+// 每个组件的基础类名前需要加前缀以便区分
+
 
 // 组件库的颜色体系
 
@@ -18,3 +20,12 @@ text color: #E5CAB9
 #d9534f
 #292b2c
 #f7f7f7
+
+
+svg图标
+
+- 完全可控
+- SVG即取即用，Font Icon要下载全部的字体文件
+- Font Icon有许多奇怪的bug
+
+react-fontawesome

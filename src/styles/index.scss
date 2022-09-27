@@ -6,13 +6,14 @@
 // config
 @import 'variables'; // 导入_varibales.scss文件，只能被引用不能被单独编译
 
-// layout
 @import 'init';
 
-// minxin
 @import 'mixin';
 
-// button样式
+@import 'animation';
+
 @import '../components//Button//style';
 
 @import '../components//Menu//style';
+
+@import '../components//Icon//style';
