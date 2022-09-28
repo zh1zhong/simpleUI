@@ -19,7 +19,7 @@ interface BaseButtonProps {
   size?: ButtonSize;
   btnType?: ButtonType;
   href?: string;
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 // 联合类型是A或者是B不能重复和交集，所以不能用联合类型
@@ -31,9 +31,10 @@ type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElemen
   由于按钮的某些必需属性可能a标签并没有，所以不能简单的将两个propsType交叉
   所以使用Partial将所有的属性变为可选属性
 */
-export type ButtonTypes = Partial<NativeButtonProps & AnchorButtonProps>
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
-const Button: React.FC<BaseButtonProps> = props => {
+// 注意一定要在此处export组件，否则自动类型推断无效
+export const Button: React.FC<ButtonProps> = props => {
   const {
     btnType,
     className, // 自定义的类名
