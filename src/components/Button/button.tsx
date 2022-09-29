@@ -15,6 +15,7 @@ export enum ButtonType {
 
 interface BaseButtonProps {
   className?: string;
+  /** 设置button的禁用*/
   disabled?: boolean;
   size?: ButtonSize;
   btnType?: ButtonType;
@@ -34,6 +35,14 @@ type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElemen
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
 // 注意一定要在此处export组件，否则自动类型推断无效
+/**
+ * 页面中最常用的的按钮元素，适合于完成特定的交互
+ * ### 引用方法
+ *
+ * ~~~js
+ * import { Button } from 'simpleUI'
+ * ~~~
+ */
 export const Button: React.FC<ButtonProps> = props => {
   const {
     btnType,
